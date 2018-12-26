@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>My submissions</title>
+    </head>
+    <body>
+
+        <h2>My submissions</h2>
+
+        <div th:each="entry : ${items}">
+            <p>
+                <!-- Security flaw #1: Cross-site scripting possible due to way name and address are printed on the page -->
+                <strong>Name:</strong> <a th:href="@{/mysignups/{id}(id=${entry.id})}"><span th:utext="${entry.name}"></span></a><br />
+                <strong>Address:</strong> <span th:utext="${entry.address}"></span>
+            </p>
+        </div>
+        
+        <a th:href="@{/form}">Back to home</a>
+
+    </body>
+</html>
