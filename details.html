@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Sign up details</title>
+    </head>
+    <body>
+
+        <h2>Sign up details</h2>
+
+        <p>
+            <!-- Security flaw #1: Cross-site scripting possible due to way name and address are printed on the page -->
+            <strong>Id:</strong> <span th:text="${signup.id}"></span><br />
+            <strong>Name:</strong> <span th:text="${signup.name}"></span><br />
+            <strong>Address:</strong> <span th:text="${signup.address}"></span><br />
+            <strong>Event:</strong> <span th:text="${signup.event}"></span><br />
+            <strong>Session:</strong> <span th:text="${signup.session}"></span>
+        </p>
+        
+        <form th:action="@{/mysignups/{id}(id=${signup.id})}" th:method="DELETE"><input type="submit" value="Remove"/></form>
+        
+        <a th:href="@{/mysignups}">Back to list</a>
+
+    </body>
+</html>
