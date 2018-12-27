@@ -11,7 +11,8 @@
             <p>
                 <!-- Security flaw #1: Cross-site scripting possible due to way name and address are printed on the page -->
                 <strong>Name:</strong> <a th:href="@{/mysignups/{id}(id=${entry.id})}"><span th:utext="${entry.name}"></span></a><br />
-                <strong>Address:</strong> <span th:utext="${entry.address}"></span>
+                <strong>Address:</strong> <span th:utext="${entry.address}"></span><br />
+                <strong>Event:</strong> <span th:utext="${entry.event}"></span><br />
             </p>
         </div>
         

@@ -8,16 +8,18 @@ public class Signup extends AbstractPersistable<Long> {
 
     private String name;
     private String address;
+    private String event;
     private String session;
 
     public Signup() {
         super();
     }
 
-    public Signup(String name, String address, String session) {
+    public Signup(String name, String address, String event, String session) {
         this();
         this.name = name;
         this.address = address;
+        this.event = event;
         this.session = session;
     }
 
@@ -35,6 +37,14 @@ public class Signup extends AbstractPersistable<Long> {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+    
+    public String getEvent() {
+        return event;
+    }
+    
+    public void setEvent(String event) {
+        this.event = event;
     }
     
     public String getSession() {

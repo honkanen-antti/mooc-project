@@ -7,6 +7,6 @@
  * Author:  anho
  * Created: 26.12.2018
  */
-INSERT INTO Event (name) VALUES('First event'), ('Second event'), ('Third event');
+INSERT INTO Event (name) VALUES('First event'), ('Second event'), ('Third event'), ('You are going to be pwned');
 
-INSERT INTO Signup (name, address, session) VALUES('Participant One', '2nd Some street', 'C563D0E21C83178E1C1E82C71F15211A'), ('Another Participant', '1st Jump Avenue', 'C563D0E21C83178E1C1E82C71F15211A');
+INSERT INTO Signup (name, address, event, session) VALUES('Participant One', '2nd Some street', 'Third event', 'C563D0E21C83178E1C1E82C71F15211A'), ('Another Participant', '1st Jump Avenue', 'Second event', 'C563D0E21C83178E1C1E82C71F15211A');
